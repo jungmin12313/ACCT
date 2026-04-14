@@ -48,7 +48,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base background layout - Radial Gradient focus */
 .bg-radial {
   background: radial-gradient(ellipse at 50% 50%, #2a2d28 0%, #1a1b17 60%, #0d0e0b 100%);
 }
@@ -60,7 +59,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* 확실한 중앙 정렬 */
   z-index: 10;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 ::selection {
@@ -98,7 +100,6 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-/* Fix for buttons shrinking in flex layouts */
 button {
   flex-shrink: 0;
 }

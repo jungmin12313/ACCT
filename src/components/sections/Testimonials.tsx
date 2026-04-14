@@ -23,8 +23,8 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="section-wrapper bg-gradient-to-b from-transparent to-navy/80 py-32 px-6">
-      <div className="max-w-7xl w-full mx-auto relative z-10">
+    <section className="section-wrapper bg-gradient-to-b from-transparent to-navy/80 py-32">
+      <div className="max-w-7xl w-full mx-auto relative z-10 px-4">
         <div className="text-center mb-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -47,7 +47,7 @@ export default function Testimonials() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mx-auto px-4">
           {reviews.map((review, index) => (
             <motion.div
               key={index}
@@ -55,24 +55,25 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group relative glass-morphism rounded-[2.5rem] p-10 flex flex-col hover:border-mint/50 hover:bg-white/5 transition-all duration-500"
+              className="group relative glass-morphism rounded-[2.5rem] p-8 md:p-10 flex flex-col hover:border-mint/50 hover:bg-white/5 transition-all duration-500 w-full"
             >
               <div className="absolute top-8 right-8 text-yellow-accent/10 group-hover:text-yellow-accent/20 transition-colors">
-                <Quote size={48} />
+                <Quote size={40} />
               </div>
-              <div className="relative z-10 flex-grow mb-12">
-                <p className="text-gray-300 text-xl leading-relaxed font-medium">
-                  {review.text.split("—").map((part, i, arr) => (
+              <div className="relative z-10 flex-grow mb-10 text-left">
+                <p className="text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
+                  {review.text.split(" — ").map((part, i, arr) => (
                     <span key={i}>
                       {part}
-                      {i < arr.length - 1 && <span className="text-white font-bold block mt-2">— {arr[i+1]}</span>}
+                      {i < arr.length - 1 && <span className="text-white font-bold block mt-3">— {arr[i+1]}</span>}
                       {i < arr.length - 1 && ""}
                     </span>
                   ))[0]}
+                  {!review.text.includes(" — ") && review.text}
                 </p>
               </div>
-              <div className="relative z-10 pt-8 border-t border-white/10">
-                <p className="text-mint font-bold text-2xl mb-1">{review.name}</p>
+              <div className="relative z-10 pt-6 mt-auto border-t border-white/10 text-left">
+                <p className="text-mint font-bold text-xl md:text-2xl mb-1">{review.name}</p>
                 <p className="text-gray-400 text-sm font-mono tracking-wide">{review.spec}</p>
               </div>
             </motion.div>

@@ -12,8 +12,8 @@ const painPoints = [
 
 export default function ProblemSection() {
   return (
-    <section className="section-wrapper bg-navy/40 backdrop-blur-sm border-y border-white/5 py-32 px-6">
-      <div className="max-w-4xl mx-auto text-center mb-20 relative z-10">
+    <section className="section-wrapper bg-navy/40 backdrop-blur-sm border-y border-white/5 py-32">
+      <div className="max-w-4xl w-full mx-auto text-center mb-20 relative z-10 px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -41,7 +41,7 @@ export default function ProblemSection() {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto relative z-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl mx-auto relative z-10 px-4">
         {painPoints.map((point, index) => (
           <motion.div
             key={index}
@@ -49,12 +49,12 @@ export default function ProblemSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.15 }}
-            className="group glass-morphism rounded-[2rem] p-10 flex items-start gap-6 hover:border-mint/50 hover:bg-white/5 transition-all duration-300"
+            className="group glass-morphism rounded-[2rem] p-8 md:p-10 flex items-start gap-6 hover:border-mint/50 hover:bg-white/5 transition-all duration-300 w-full"
           >
             <div className="w-10 h-10 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
               <XCircle className="w-6 h-6 text-red-400" />
             </div>
-            <p className="text-gray-200 text-xl md:text-2xl font-semibold leading-relaxed drop-shadow-sm">
+            <p className="text-gray-200 text-xl md:text-2xl font-semibold leading-relaxed drop-shadow-sm text-left">
               {point}
             </p>
           </motion.div>

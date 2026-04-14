@@ -6,13 +6,13 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="section-wrapper bg-gradient-to-b from-transparent to-navy py-32 px-6">
-      <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center relative">
+    <section className="section-wrapper bg-gradient-to-b from-transparent to-navy py-32">
+      <div className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center relative px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative w-full bg-gradient-to-b from-[#2a2d28]/90 to-[#1e201c]/95 backdrop-blur-2xl border border-white/10 rounded-[3rem] p-12 md:p-16 lg:p-24 shadow-[0_20px_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col items-center text-center group"
+          className="relative w-full bg-gradient-to-b from-[#2a2d28]/90 to-[#1e201c]/95 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-[0_20px_80px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col items-center text-center group"
         >
           {/* Decorative elements */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1 bg-gradient-to-r from-transparent via-mint to-transparent opacity-60" />
@@ -37,8 +37,8 @@ export default function CTA() {
 
             <div className="flex flex-col items-center w-full relative">
               <Link href="/register">
-                <button className="relative z-10 inline-flex items-center justify-center px-10 md:px-14 py-6 md:py-7 font-bold text-navy bg-mint rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.05] hover:shadow-mint-strong active:scale-95 group/btn min-w-[280px]">
-                  <span className="relative z-20 text-2xl md:text-3xl flex items-center gap-4">
+                <button className="relative z-10 inline-flex items-center justify-center px-10 md:px-14 py-5 md:py-7 font-bold text-navy bg-mint rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.05] hover:shadow-mint-strong active:scale-95 group/btn min-w-[260px] md:min-w-[300px]">
+                  <span className="relative z-20 text-xl md:text-3xl flex items-center gap-4">
                     지금 바로 신청하기
                     <ArrowRight className="w-7 h-7 md:w-8 md:h-8 transition-transform duration-300 group-hover/btn:translate-x-1.5" />
                   </span>
@@ -49,16 +49,16 @@ export default function CTA() {
 
             <div className="mt-16 pt-10 border-t border-white/10 w-full max-w-3xl flex flex-wrap items-center justify-center gap-x-10 gap-y-6 relative z-10 font-mono text-gray-400">
               <div className="flex items-center gap-3 hover:text-gray-200 transition-colors">
-                <CreditCard className="w-6 h-6" />
-                <span className="text-base tracking-wide">카드 등록 없음</span>
+                <CreditCard className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="text-sm md:text-base tracking-wide">카드 등록 없음</span>
               </div>
               <div className="flex items-center gap-3 hover:text-gray-200 transition-colors">
-                <Lock className="w-6 h-6" />
-                <span className="text-base tracking-wide">개인정보 보호</span>
+                <Lock className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="text-sm md:text-base tracking-wide">개인정보 보호</span>
               </div>
               <div className="flex items-center gap-3 hover:text-gray-200 transition-colors">
-                <Timer className="w-6 h-6" />
-                <span className="text-base tracking-wide">30초면 충분</span>
+                <Timer className="w-5 h-5 md:w-6 md:h-6" />
+                <span className="text-sm md:text-base tracking-wide">30초면 충분</span>
               </div>
             </div>
           </div>

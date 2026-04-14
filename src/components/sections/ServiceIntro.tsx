@@ -31,8 +31,8 @@ const features = [
 
 export default function ServiceIntro() {
   return (
-    <section className="section-wrapper bg-gradient-to-b from-navy via-navy/95 to-transparent py-32 px-6">
-      <div className="max-w-6xl w-full mx-auto relative z-10">
+    <section className="section-wrapper bg-gradient-to-b from-navy via-navy/95 to-transparent py-32">
+      <div className="max-w-6xl w-full mx-auto relative z-10 px-4">
         <div className="text-center mb-24">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -55,7 +55,7 @@ export default function ServiceIntro() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto px-4">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -63,14 +63,14 @@ export default function ServiceIntro() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-[#2a2d28]/60 backdrop-blur-md border border-[#444b41]/60 rounded-[2.5rem] p-10 transition-all duration-500 hover:-translate-y-2 hover:bg-[#2a2d28]/80 hover:border-mint/50 hover:shadow-mint"
+              className="group relative bg-[#2a2d28]/60 backdrop-blur-md border border-[#444b41]/60 rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 hover:-translate-y-2 hover:bg-[#2a2d28]/80 hover:border-mint/50 hover:shadow-mint w-full overflow-hidden"
             >
-              <div className="relative z-10">
+              <div className="relative z-10 text-left">
                 <div className="w-16 h-16 rounded-2xl bg-[#1e201c] border border-[#444b41] flex items-center justify-center text-4xl mb-8 group-hover:scale-110 group-hover:rotate-3 group-hover:border-mint/50 transition-all duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-6 tracking-tight">{feature.title}</h3>
-                <p className="text-gray-400 text-xl leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight">{feature.title}</h3>
+                <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
                   <span className="text-gray-200">"{feature.desc}"</span> — <br className="hidden lg:block" />
                   <span className="text-mint font-bold italic">{feature.highlight}</span>
                 </p>
