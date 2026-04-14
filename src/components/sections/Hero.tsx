@@ -29,16 +29,17 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex flex-col items-center"
         >
-          <button
-            onClick={scrollToCTA}
-            className="group relative inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 font-bold text-navy bg-mint rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-mint active:scale-95"
-          >
-            <span className="relative z-10 text-lg md:text-xl flex items-center gap-2">
-              지금 바로 신청하기
-              <ArrowRight className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1.5" />
-            </span>
-            <div className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-          </button>
+          <Link href="/register">
+            <button
+              className="group relative inline-flex items-center justify-center px-8 md:px-10 py-4 md:py-5 font-bold text-navy bg-mint rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:shadow-mint active:scale-95"
+            >
+              <span className="relative z-10 text-lg md:text-xl flex items-center gap-2">
+                지금 바로 신청하기
+                <ArrowRight className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1.5" />
+              </span>
+              <div className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+            </button>
+          </Link>
           
           <div className="mt-5 flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-mint animate-pulse shadow-[0_0_10px_rgba(146,220,115,0.8)]" />

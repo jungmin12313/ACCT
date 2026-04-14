@@ -39,7 +39,7 @@ export default function CTA() {
               <Link href="/register">
                 <button className="relative z-10 inline-flex items-center justify-center px-8 md:px-12 py-5 md:py-6 font-bold text-navy bg-mint rounded-full overflow-hidden transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 shadow-[0_10px_30px_rgba(146,220,115,0.2)] hover:shadow-mint-strong active:scale-95 group/btn">
                   <span className="relative z-20 text-xl md:text-2xl flex items-center gap-3">
-                    5문제 무료로 풀어보기
+                    지금 바로 신청하기
                     <ArrowRight className="w-6 h-6 md:w-7 md:h-7 transition-transformed duration-300 group-hover/btn:translate-x-1.5" />
                   </span>
                   <div className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover/btn:opacity-20 transition-opacity duration-300 z-10" />
