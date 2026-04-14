@@ -22,7 +22,7 @@
   --color-border-green: var(--border-green);
   --color-yellow-accent: var(--yellow-accent);
 
-  --font-sans: "Pretendard", var(--font-inter);
+  --font-sans: "Pretendard", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   
   --shadow-mint: 0 0 30px rgba(146, 220, 115, 0.3);
@@ -46,6 +46,21 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base background layout - Radial Gradient focus */
+.bg-radial {
+  background: radial-gradient(ellipse at 50% 50%, #2a2d28 0%, #1a1b17 60%, #0d0e0b 100%);
+}
+
+.section-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
 }
 
 ::selection {
@@ -72,8 +87,8 @@ body {
 
 .glass-morphism {
   background: rgba(42, 45, 40, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(68, 75, 65, 0.6);
 }
 
@@ -81,4 +96,9 @@ body {
   background: linear-gradient(to right, #92dc73, #a4f082);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Fix for buttons shrinking in flex layouts */
+button {
+  flex-shrink: 0;
 }

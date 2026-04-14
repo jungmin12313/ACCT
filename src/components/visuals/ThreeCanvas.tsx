@@ -57,8 +57,8 @@ export default function ThreeCanvas() {
     
     // Calculator Group
     const calcGroup = new THREE.Group();
-    calcGroup.scale.set(1.55, 1.55, 1.55);
-    calcGroup.position.set(0, 0.3, -2);
+    calcGroup.scale.set(1.2, 1.2, 1.2); // Reduced scale
+    calcGroup.position.set(0, 0, -2); // Centered a bit more
     
     const bodyGeom = new THREE.BoxGeometry(3.6, 5.4, 0.6);
     const bodyMat = new THREE.MeshStandardMaterial({ 
